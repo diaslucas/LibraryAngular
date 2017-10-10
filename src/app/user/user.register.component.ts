@@ -4,7 +4,7 @@ import { UserComponent } from "./user.component";
 @Component({
     moduleId: module.id,
     selector: 'form-user',
-    templateUrl: './user.component.html'
+    templateUrl: './user.register.component.html'
 
 })
 
