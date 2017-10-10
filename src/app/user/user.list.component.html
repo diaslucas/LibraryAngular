@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>User List</h1>
+    <a [routerLink]="['/user']" class="btn btn-success">New User</a>
+    <br/><br/>
+    <input #searchedWords (keyup)="0" class="form-control" placeholder="Filter by name or email">
+    <br/>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>User Name</th>
+                <th>User Email</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>book.id</th>
+                <td>book.nome</td>
+                <td>ook.quantidade</td>
+                <td>
+                    <a class="btn btn-primary">Edit</a>
+                </td>
+                <td>
+                    <button (click)="delete(book, tr)" class="btn btn-danger">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
