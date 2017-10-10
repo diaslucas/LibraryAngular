@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let user of users">
+            <tr *ngFor="let user of users | filterByNameAndEmail: searchedWords.value">
                 <th>{{user.id}}</th>
                 <td>{{user.nome}}</td>
                 <td>{{user.email}}</td>
