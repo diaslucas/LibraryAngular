@@ -1,4 +1,4 @@
-import { Component, Inject } from "@angular/core";
+import { Component } from "@angular/core";
 import { BookComponent } from "./book.component";
 import { BookService } from "./book.service";
 import swal from 'sweetalert2';

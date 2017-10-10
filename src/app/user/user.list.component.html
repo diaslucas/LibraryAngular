@@ -15,15 +15,15 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let user of users | filterByNameAndEmail: searchedWords.value">
+            <tr #tr *ngFor="let user of users | filterByNameAndEmail: searchedWords.value">
                 <th>{{user.id}}</th>
                 <td>{{user.nome}}</td>
                 <td>{{user.email}}</td>
                 <td>
-                    <a class="btn btn-primary">Edit</a>
+                    <a [routerLink]="['/user', user.id]" class="btn btn-primary">Edit</a>
                 </td>
                 <td>
-                    <button (click)="delete(book, tr)" class="btn btn-danger">
+                    <button (click)="delete(user, tr)" class="btn btn-danger">
                         Delete
                     </button>
                 </td>
