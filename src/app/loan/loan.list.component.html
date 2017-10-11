@@ -22,8 +22,8 @@
                 <th>{{loan.id}}</th>
                 <td>{{loan.livro.nome}}</td>
                 <td>{{loan.usuario.nome}}</td>
-                <td>{{loan.dataEmprestimo}}</td>
-                <td>{{loan.dataDevolucao}}</td>
+                <td>{{loan.dataEmprestimo | date:'MM/dd/yyyy'}}</td>
+                <td>{{loan.dataDevolucao | date:'MM/dd/yyyy'}}</td>
                 <td>{{loan.devolvido ? 'Yes' : 'No'}}</td>
                 <td>
                     <a [routerLink]="['']" class="btn btn-primary">Edit</a>

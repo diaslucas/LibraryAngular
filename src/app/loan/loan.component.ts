@@ -12,8 +12,8 @@ export class LoanComponent{
     id: number;
     livro: BookComponent;
     usuario: UserComponent;
-    dataEmprestimo: Date;
-    dataDevolucao: Date;
+    dataEmprestimo: Date = new Date();
+    dataDevolucao: Date = new Date();
     devolvido: boolean;
 
 }

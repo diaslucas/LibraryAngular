@@ -4,14 +4,14 @@ import { LoanListComponent } from "./loan.list.component";
 import { LoanService } from "./loan.service";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { routing } from "../app.routes";
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import * as $ from 'jquery';
 
 @NgModule({
     imports: [FormsModule, ReactiveFormsModule, routing, CommonModule],
     declarations: [LoanComponent, LoanListComponent],
     exports: [LoanComponent, LoanListComponent],
-    providers: [LoanService]
+    providers: [LoanService, DatePipe]
 })
 
 export class LoanModule{}
