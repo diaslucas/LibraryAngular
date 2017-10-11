@@ -18,13 +18,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr #tr>
-                <th>user.id</th>
-                <td>user.nome</td>
-                <td>user.email</td>
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
+            <tr #tr *ngFor="let loan of loans">
+                <th>{{loan.id}}</th>
+                <td>{{loan.livro.nome}}</td>
+                <td>{{loan.usuario.nome}}</td>
+                <td>{{loan.dataEmprestimo}}</td>
+                <td>{{loan.dataDevolucao}}</td>
+                <td>{{loan.devolvido ? 'Yes' : 'No'}}</td>
                 <td>
                     <a [routerLink]="['']" class="btn btn-primary">Edit</a>
                 </td>
