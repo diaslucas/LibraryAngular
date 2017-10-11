@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Loan List</h1>
+    <a [routerLink]="['']" class="btn btn-success">New Loan</a>
+    <br/><br/>
+    <input #searchedWords (keyup)="0" class="form-control" placeholder="Filter by book, user or date">
+    <br/>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Loan Id</th>
+                <th>Book Name</th>
+                <th>User Name</th>
+                <th>Loan Date</th>
+                <th>Return Date</th>
+                <th>Returned</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr #tr *ngFor="let user of users | filterByNameAndEmail: searchedWords.value">
+                <th>user.id</th>
+                <td>user.nome</td>
+                <td>user.email</td>
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+                <td>
+                    <a [routerLink]="['']" class="btn btn-primary">Edit</a>
+                </td>
+                <td>
+                    <button (click)="delete(user, tr)" class="btn btn-danger">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
